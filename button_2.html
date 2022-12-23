@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button{
+
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            box-shadow: 2px 2px 5px rgb(0,0,0,0.8);
+            border: none;
+            background-color: rgb(147, 255, 130);
+            position: relative;
+        }
+
+        button::before{
+            content: "";
+            width:12px;
+            height:12px;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            border-top: 4px solid black;
+            border-left: 4px solid black;
+            transition: all .8s;
+        }
+        button::after{
+            content: "";
+            width:12px;
+            height:12px;
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            border-bottom: 4px solid black;
+            border-right: 4px solid black;
+            transition: all .8s;
+            
+        }
+
+        button:hover:before,button:hover:after{
+            width: 150px;
+            height: 50px;
+            box-shadow: 2px 2px 5px rgb(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+</html>

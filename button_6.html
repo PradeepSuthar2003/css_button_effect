@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(31, 9, 31);
+        display: grid;
+        place-items: center;
+    }
+
+    .bt-1
+    {
+        position: relative;
+        width: 8rem;
+        height: 3rem;
+        border-radius:3rem;
+        background-image: linear-gradient(45deg,rgba(31, 9, 31, 0.782) 50%, rgb(31, 9, 31) 50%);
+        border:none;
+        border-top: 2px solid rgb(66, 37, 66);
+        border-bottom: 2px solid rgb(66, 37, 66);
+        backdrop-filter: blur(15px);
+        transition: all .8s;
+        z-index: 2;
+    }
+    
+    .bt-1 a{
+        text-decoration: none;
+        letter-spacing: .1rem;
+        color: rgba(180, 255, 18, 0.997);
+    }
+
+    /* .bt-1::before
+    {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        transform: translateX(50%);
+        bottom: -30%;
+        background-color: red;
+        box-shadow: 0 0 50px rgb(255, 0, 0);
+        z-index: -1;
+        border-radius: 50%;
+        transform: skewX(35px) translateX(0);
+    } */
+
+    .bt-1:hover
+    {
+        background-image: linear-gradient(45deg,rgba(31, 9, 31, 0.782) 100%, rgb(31, 9, 31) 0%);
+    }
+</style>
+</head>
+<body>
+    <div class="center">
+        <button class="bt-1">
+            <a href="#">Read Me</a>
+        </button>
+    </div>
+</body>
+</html>

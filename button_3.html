@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button_3</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child {
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bt1 {
+            width: 200px;
+            height: 50px;
+            letter-spacing: 2px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            background-color: #494949;
+            color: rgb(255, 255, 255);
+            transition: .8s;
+            box-shadow: 5px 5px 5px rgb(0,0,0,0.8);
+        }
+
+        .bt1:hover{
+            animation: col 10s linear infinite alternate-reverse;
+            cursor: pointer;
+        }
+
+        @keyframes col {
+
+            0%{
+                background-color:  #474747;
+            }
+
+            20%{
+                background-color:  #428aff;
+            }
+            40%{
+                background-color:  #ff5dab;
+            }
+            60%{
+                background-color:  #ff0000;
+            }
+            80%{
+                background-color:  #555441;
+            }
+            100%{
+                background-color:  #474747;
+            }
+        }
+
+        .bt2 {
+            width: 200px;
+            height: 50px;
+            letter-spacing: 2px;
+            font-size: 20px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            transition: .8s;
+            position: relative;
+            transition: .8s;
+        }
+
+        .bt2::before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            top: 0;
+            left: 0;
+            border: 3px solid orange;
+            animation: rotate 1s linear infinite alternate-reverse;
+        }
+
+        .bt2::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            bottom: 0;
+            right: 0;
+            border: 3px solid orange;
+            animation: rotate 1s linear infinite alternate-reverse;
+            z-index: -1;
+        }
+
+        .bt2:hover:before {
+
+            width: 12px;
+            height: 12px;
+            border-bottom: 10px;
+            border-right: 10px;
+            transition: .8s;
+            transform: rotate(360deg);
+        }
+
+        .bt2:hover:after {
+
+            width: 12px;
+            height: 12px;
+            border-top: 10px;
+            border-left: 10px;
+            z-index: 1;
+            transition: .8s;
+            transform: rotate(360deg);
+        }
+
+        .bt3{
+            width: 200px;
+            height: 50px;
+            letter-spacing: 2px;
+            font-size: 20px;
+            border: none;
+            color: aliceblue;
+            background-color: rgb(255, 93, 109);
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px rgb(0,0,0,0.8);
+        }
+
+        .bt3::before{
+                    content: "";
+                    position: absolute;
+                    width: 200px;
+                    height: 50px;
+                    top: 50px;
+                    left: 0;
+                    background-color: rgb(3, 255, 8);
+                    transition: .8s;
+                    z-index: -1;
+        }
+        .bt3:hover:before{
+                    top: 0;
+                    z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="child">
+            <button class="bt1">Click Me</button>
+            <button class="bt2">Click Me</button>
+            <button class="bt3">Click Me</button>
+        </div>
+    </div>
+</body>
+
+</html>
